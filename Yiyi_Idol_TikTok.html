@@ -7,45 +7,35 @@
 <style>
 body {
   margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(180deg, #f3e5f5, #ede7f6);
   color: #4a148c;
-  overflow: hidden;
-}
-
-/* Hộp chính giữa */
-.container {
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 30px;
-  padding: 30px;
-  width: 350px;
   text-align: center;
-  box-shadow: 0 0 40px #ce93d8;
-  animation: glow 3s infinite alternate;
-}
-
-@keyframes glow {
-  from { box-shadow: 0 0 20px #ab47bc; }
-  to { box-shadow: 0 0 50px #ce93d8; }
+  overflow-x: hidden;
 }
 
 /* Tiêu đề */
 h1 {
-  font-size: 1.8em;
+  font-size: 2.8em;
+  margin-top: 50px;
   color: #6a1b9a;
   text-shadow: 0 0 10px #ba68c8;
 }
 
-/* Slider hình ảnh */
+/* Mô tả */
+p {
+  font-size: 1.2em;
+  width: 75%;
+  margin: 20px auto;
+  line-height: 1.8;
+}
+
+/* Slider */
 .slider {
   position: relative;
-  width: 250px;
-  height: 250px;
-  margin: 20px auto;
+  width: 300px;
+  height: 300px;
+  margin: 40px auto;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 0 20px #ab47bc;
@@ -75,17 +65,10 @@ h1 {
   100% { opacity: 0; }
 }
 
-/* Mô tả */
-p {
-  font-size: 0.95em;
-  line-height: 1.6;
-  color: #5e35b1;
-}
-
 /* Tim bay */
 .heart {
   position: fixed;
-  font-size: 18px;
+  font-size: 20px;
   color: #ec407a;
   animation: float 5s linear infinite;
   z-index: 10;
@@ -95,23 +78,33 @@ p {
   0% { transform: translateY(0) scale(1); opacity: 1; }
   100% { transform: translateY(-800px) scale(1.5); opacity: 0; }
 }
+
+footer {
+  margin-top: 60px;
+  font-size: 0.9em;
+  color: #7b1fa2;
+}
 </style>
 </head>
 <body>
-  <div class="container">
-    <h1>🌸 Yiyi - Idol TikTok 2007 🌸</h1>
-    <div class="slider">
-      <img src="https://i.pinimg.com/736x/b3/26/0f/b3260f6d7b9c9ce0b3e7c2c87f8e9d4f.jpg" alt="Yiyi dễ thương">
-      <img src="https://i.pinimg.com/736x/72/13/3d/72133d6e4487f6ac68eae3de58e3dbcf.jpg" alt="Yiyi đáng yêu">
-      <img src="https://i.pinimg.com/736x/8b/ed/17/8bed1712deec80135f0a8a83b764cc6d.jpg" alt="Yiyi ngọt ngào">
-      <img src="https://i.pinimg.com/736x/4a/3e/13/4a3e13d62d9d9a9ce7d41c447509fcb1.jpg" alt="Yiyi tỏa sáng">
-    </div>
-    <p>
-      Gặp gỡ <strong>Yiyi</strong> – cô gái nhỏ nhắn sinh năm <strong>2007</strong> với mái tóc <strong>màu tím mộng mơ</strong> 💜.<br>
-      Cô ấy mang năng lượng tích cực, nụ cười như nắng ban mai và đôi mắt biết nói khiến ai nhìn cũng say đắm ☀️.<br>
-      Mỗi khi Yiyi livestream, hàng ngàn trái tim rung động trước sự đáng yêu, tự tin và tinh nghịch của cô bé TikTok idol ✨.
-    </p>
+  <h1>🌸 Cô Bé Idol TikTok - Yiyi 2007 🌸</h1>
+
+  <!-- Slider hình ảnh -->
+  <div class="slider">
+    <img src="https://i.pinimg.com/736x/b3/26/0f/b3260f6d7b9c9ce0b3e7c2c87f8e9d4f.jpg" alt="Yiyi dễ thương">
+    <img src="https://i.pinimg.com/736x/72/13/3d/72133d6e4487f6ac68eae3de58e3dbcf.jpg" alt="Yiyi đáng yêu">
+    <img src="https://i.pinimg.com/736x/8b/ed/17/8bed1712deec80135f0a8a83b764cc6d.jpg" alt="Yiyi ngọt ngào">
+    <img src="https://i.pinimg.com/736x/4a/3e/13/4a3e13d62d9d9a9ce7d41c447509fcb1.jpg" alt="Yiyi tỏa sáng">
   </div>
+
+  <p>
+    Gặp gỡ <strong>Yiyi</strong> – cô gái nhỏ nhắn sinh năm <strong>2007</strong> với mái tóc <strong>màu tím mộng mơ</strong> 💜.<br>
+    Cô ấy mang trong mình năng lượng tích cực, nụ cười như ánh nắng ban mai và đôi mắt biết nói khiến ai nhìn cũng phải say đắm ☀️.<br>
+    Mỗi khi Yiyi lên sóng TikTok, hàng ngàn trái tim đều rung động bởi sự tự nhiên, đáng yêu và phong cách ngọt ngào khó cưỡng 💕.<br>
+    Dù chỉ đơn giản là mỉm cười, Yiyi vẫn tỏa sáng như ánh sao nhỏ giữa bầu trời TikTok ✨.
+  </p>
+
+  <footer>© 2025 Bởi Người Hâm Mộ Yiyi 💜</footer>
 
   <script>
   // Hiệu ứng tim bay 💕
