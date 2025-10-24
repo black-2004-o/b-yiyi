@@ -16,26 +16,30 @@ body {
 
 /* Tiêu đề */
 h1 {
-  font-size: 2.8em;
-  margin-top: 50px;
+  font-size: 2em;
+  margin: 30px 10px 20px;
   color: #6a1b9a;
   text-shadow: 0 0 10px #ba68c8;
+  line-height: 1.4;
 }
 
 /* Mô tả */
 p {
-  font-size: 1.2em;
-  width: 75%;
-  margin: 20px auto;
-  line-height: 1.8;
+  font-size: 1em;
+  width: 90%;
+  margin: 10px auto 30px;
+  line-height: 1.6;
+  color: #5e35b1;
 }
 
 /* Slider */
 .slider {
   position: relative;
-  width: 300px;
-  height: 300px;
-  margin: 40px auto;
+  width: 90%;
+  max-width: 350px;
+  height: auto;
+  aspect-ratio: 1/1;
+  margin: 20px auto;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 0 20px #ab47bc;
@@ -51,7 +55,7 @@ p {
   border-radius: 20px;
 }
 
-/* Mỗi ảnh xuất hiện theo thứ tự */
+/* Ảnh hiển thị lần lượt */
 .slider img:nth-child(1) { animation-delay: 0s; }
 .slider img:nth-child(2) { animation-delay: 4s; }
 .slider img:nth-child(3) { animation-delay: 8s; }
@@ -68,7 +72,7 @@ p {
 /* Tim bay */
 .heart {
   position: fixed;
-  font-size: 20px;
+  font-size: 18px;
   color: #ec407a;
   animation: float 5s linear infinite;
   z-index: 10;
@@ -79,10 +83,21 @@ p {
   100% { transform: translateY(-800px) scale(1.5); opacity: 0; }
 }
 
+/* Footer */
 footer {
-  margin-top: 60px;
-  font-size: 0.9em;
+  margin-bottom: 30px;
+  font-size: 0.85em;
   color: #7b1fa2;
+}
+
+/* Responsive cho màn nhỏ */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6em;
+  }
+  p {
+    font-size: 0.95em;
+  }
 }
 </style>
 </head>
@@ -99,9 +114,8 @@ footer {
 
   <p>
     Gặp gỡ <strong>Yiyi</strong> – cô gái nhỏ nhắn sinh năm <strong>2007</strong> với mái tóc <strong>màu tím mộng mơ</strong> 💜.<br>
-    Cô ấy mang trong mình năng lượng tích cực, nụ cười như ánh nắng ban mai và đôi mắt biết nói khiến ai nhìn cũng phải say đắm ☀️.<br>
-    Mỗi khi Yiyi lên sóng TikTok, hàng ngàn trái tim đều rung động bởi sự tự nhiên, đáng yêu và phong cách ngọt ngào khó cưỡng 💕.<br>
-    Dù chỉ đơn giản là mỉm cười, Yiyi vẫn tỏa sáng như ánh sao nhỏ giữa bầu trời TikTok ✨.
+    Cô ấy mang năng lượng tích cực, nụ cười như nắng mai và đôi mắt biết nói khiến ai cũng phải say đắm ☀️.<br>
+    Mỗi khi Yiyi livestream, hàng ngàn trái tim đều rung động bởi sự đáng yêu và tự tin của cô bé idol TikTok ✨.
   </p>
 
   <footer>© 2025 Bởi Người Hâm Mộ Yiyi 💜</footer>
