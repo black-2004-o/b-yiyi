@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yiyi - Idol TikTok Dễ Thương 💜</title>
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #f3e5f5, #ede7f6);
+  color: #4a148c;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Tiêu đề */
+h1 {
+  font-size: 2.8em;
+  margin-top: 50px;
+  color: #6a1b9a;
+  text-shadow: 0 0 10px #ba68c8;
+}
+
+/* Mô tả */
+p {
+  font-size: 1.2em;
+  width: 75%;
+  margin: 20px auto;
+  line-height: 1.8;
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 40px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 20px #ab47bc;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0;
+  animation: slideShow 16s infinite;
+  border-radius: 20px;
+}
+
+/* Mỗi ảnh xuất hiện theo thứ tự */
+.slider img:nth-child(1) { animation-delay: 0s; }
+.slider img:nth-child(2) { animation-delay: 4s; }
+.slider img:nth-child(3) { animation-delay: 8s; }
+.slider img:nth-child(4) { animation-delay: 12s; }
+
+@keyframes slideShow {
+  0% { opacity: 0; transform: scale(1.05); }
+  10% { opacity: 1; transform: scale(1); }
+  25% { opacity: 1; transform: scale(1); }
+  35% { opacity: 0; transform: scale(1.05); }
+  100% { opacity: 0; }
+}
+
+/* Tim bay */
+.heart {
+  position: fixed;
+  font-size: 20px;
+  color: #ec407a;
+  animation: float 5s linear infinite;
+  z-index: 10;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-800px) scale(1.5); opacity: 0; }
+}
+
+footer {
+  margin-top: 60px;
+  font-size: 0.9em;
+  color: #7b1fa2;
+}
+</style>
+</head>
+<body>
+  <h1>🌸 Cô Bé Idol TikTok Tên là Yiyi 2007 🌸</h1>
+
+  <!-- Slider hình ảnh -->
+  <div class="slider">
+    <img src="https://i.pinimg.com/736x/b3/26/0f/b3260f6d7b9c9ce0b3e7c2c87f8e9d4f.jpg" alt="Yiyi dễ thương">
+    <img src="https://i.pinimg.com/736x/72/13/3d/72133d6e4487f6ac68eae3de58e3dbcf.jpg" alt="Yiyi đáng yêu">
+    <img src="https://i.pinimg.com/736x/8b/ed/17/8bed1712deec80135f0a8a83b764cc6d.jpg" alt="Yiyi ngọt ngào">
+    <img src="https://i.pinimg.com/736x/4a/3e/13/4a3e13d62d9d9a9ce7d41c447509fcb1.jpg" alt="Yiyi tỏa sáng">
+  </div>
+
+  <p>
+    Gặp gỡ <strong>Yiyi</strong> – cô gái nhỏ nhắn sinh năm <strong>2007</strong> với mái tóc <strong>màu tím mộng mơ</strong> 💜.<br>
+    Cô ấy mang trong mình năng lượng tích cực, nụ cười như ánh nắng ban mai và đôi mắt biết nói khiến ai nhìn cũng phải say đắm ☀️.<br>
+    Mỗi khi Yiyi lên sóng TikTok, hàng ngàn trái tim đều rung động bởi sự tự nhiên, đáng yêu và phong cách ngọt ngào khó cưỡng 💕.<br>
+    Dù chỉ đơn giản là mỉm cười, Yiyi vẫn tỏa sáng như ánh sao nhỏ giữa bầu trời TikTok ✨.
+  </p>
+
+  <footer>© 2025 Bởi Người Hâm Mộ Yiyi 💜</footer>
+
+  <script>
+  // Hiệu ứng tim bay 💕
+  const hearts = ["💜","💖","💕","💞","💗"];
+  function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.textContent = hearts[Math.floor(Math.random()*hearts.length)];
+    heart.style.left = Math.random() * window.innerWidth + "px";
+    heart.style.bottom = "0px";
+    heart.style.animationDuration = 3 + Math.random() * 3 + "s";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 5000);
+  }
+  setInterval(createHeart, 300);
+  </script>
+</body>
+</html>
