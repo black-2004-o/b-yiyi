@@ -1,279 +1,125 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>Quảng Cáo Sản Phẩm</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      padding: 20px;
-    }
-    .product {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: row;
-    }
-    .product img {
-      width: 250px;
-      height: auto;
-      object-fit: cover;
-    }
-    .info {
-      padding: 20px;
-    }
-    .info h2 {
-      color: #009688;
-      margin-bottom: 10px;
-    }
-    .info p {
-      margin: 5px 0;
-      line-height: 1.6;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yiyi - Idol TikTok Dễ Thương 💜</title>
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #f3e5f5, #ede7f6);
+  color: #4a148c;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Tiêu đề */
+h1 {
+  font-size: 2.8em;
+  margin-top: 50px;
+  color: #6a1b9a;
+  text-shadow: 0 0 10px #ba68c8;
+}
+
+/* Mô tả */
+p {
+  font-size: 1.2em;
+  width: 75%;
+  margin: 20px auto;
+  line-height: 1.8;
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 40px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 20px #ab47bc;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0;
+  animation: slideShow 16s infinite;
+  border-radius: 20px;
+}
+
+/* Mỗi ảnh xuất hiện theo thứ tự */
+.slider img:nth-child(1) { animation-delay: 0s; }
+.slider img:nth-child(2) { animation-delay: 4s; }
+.slider img:nth-child(3) { animation-delay: 8s; }
+.slider img:nth-child(4) { animation-delay: 12s; }
+
+@keyframes slideShow {
+  0% { opacity: 0; transform: scale(1.05); }
+  10% { opacity: 1; transform: scale(1); }
+  25% { opacity: 1; transform: scale(1); }
+  35% { opacity: 0; transform: scale(1.05); }
+  100% { opacity: 0; }
+}
+
+/* Tim bay */
+.heart {
+  position: fixed;
+  font-size: 20px;
+  color: #ec407a;
+  animation: float 5s linear infinite;
+  z-index: 10;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-800px) scale(1.5); opacity: 0; }
+}
+
+footer {
+  margin-top: 60px;
+  font-size: 0.9em;
+  color: #7b1fa2;
+}
+</style>
 </head>
 <body>
+  <h1>🌸 Yiyi - Cô Bé Idol TikTok 2007 🌸</h1>
 
-  <!-- Logo Eagle Team -->
-  <div style="text-align: center; margin-bottom: 40px;">
-    <img src="z6831928265697_bdcd14cc420c11d3a1636e5f34b5d8f0.jpg" alt="Eagle Team Logo" style="height: 120px;">
+  <!-- Slider hình ảnh -->
+  <div class="slider">
+    <img src="https://i.pinimg.com/736x/b3/26/0f/b3260f6d7b9c9ce0b3e7c2c87f8e9d4f.jpg" alt="Yiyi dễ thương">
+    <img src="https://i.pinimg.com/736x/72/13/3d/72133d6e4487f6ac68eae3de58e3dbcf.jpg" alt="Yiyi đáng yêu">
+    <img src="https://i.pinimg.com/736x/8b/ed/17/8bed1712deec80135f0a8a83b764cc6d.jpg" alt="Yiyi ngọt ngào">
+    <img src="https://i.pinimg.com/736x/4a/3e/13/4a3e13d62d9d9a9ce7d41c447509fcb1.jpg" alt="Yiyi tỏa sáng">
   </div>
 
-  <!-- Sản phẩm 1 -->
-  <div class="product">
-    <img src="z6826498043653_173d59a2b0bdf6bff0b3ae04c63489ca.jpg" alt="Trà Thảo Dược">
-    <div class="info">
-      <h2>Trà Thảo Dược Summit</h2>
-      <p><strong>Thành phần:</strong> kim ngân, chi tử, cúc hoa, cam thảo, nhân trần.</p>
-      <p><strong>Công dụng:</strong> Thanh nhiệt, giải độc gan, hỗ trợ tiêu hóa, giảm huyết áp.</p>
-      <p><strong>Cách dùng:</strong> Pha 1 túi với 200ml nước sôi, ngâm 3–5 phút, uống 1–2 lần/ngày.</p>
-    </div>
-  </div>
+  <p>
+    Gặp gỡ <strong>Yiyi</strong> – cô gái nhỏ nhắn sinh năm <strong>2007</strong> với mái tóc <strong>màu tím mộng mơ</strong> 💜.<br>
+    Cô ấy mang trong mình năng lượng tích cực, nụ cười như ánh nắng ban mai và đôi mắt biết nói khiến ai nhìn cũng phải say đắm ☀️.<br>
+    Mỗi khi Yiyi lên sóng TikTok, hàng ngàn trái tim đều rung động bởi sự tự nhiên, đáng yêu và phong cách ngọt ngào khó cưỡng 💕.<br>
+    Dù chỉ đơn giản là mỉm cười, Yiyi vẫn tỏa sáng như ánh sao nhỏ giữa bầu trời TikTok ✨.
+  </p>
 
-  <!-- Sản phẩm 2 -->
-<div class="product">
-  <img src="prosure_energy.jpg" alt="Sữa Prosure Energy">
-  <div class="info">
-    <h2>Sữa Prosure Energy – Thực phẩm bổ sung dinh dưỡng</h2>
+  <footer>© 2025 Bởi Người Hâm Mộ Yiyi 💜</footer>
 
-    <p><strong>Thành phần:</strong> Sữa bột béo, Bột kem không sữa (non dairy creamer CFI-Creamer 3SC), 
-    Sữa bột gầy, Đường tinh luyện hạt nhuyễn, 
-    Chất xơ inulin (Orafti GR), 
-    Bột béo ProFat MCT, 
-    Palatinose PST-N, 
-    Đạm whey cô đặc 80%, 
-    Bột sữa Non tách béo, 
-    Đường Maltodextrin (Maltodextrin MDX-1012), 
-    Collagen thủy phân, 
-    Tảo biển đỏ (Lithothamnium Aquamin F),
-    Hỗn hợp Vitamin & Khoáng chất: Vitamin A, B1, B2, B3, B6, B12, C, D3, E, K1, Biotin, Folic Acid, Sắt, Kẽm, Magie... 
-    Chất ổn định (INS 415; INS 341 (iii)), Hương liệu tổng hợp (hương sữa, hương vanilla) dùng cho thực phẩm.</p>
-
-    <p><strong>🩺 Công dụng:</strong></p>
-    <ul>
-      <li><strong>💪 Hỗ trợ phục hồi nhanh, tăng cân lành mạnh:</strong><br>
-        - Bổ sung năng lượng vượt trội từ Palatinose, MCT và Maltodextrin<br>
-        - Đạm whey cô đặc 80% + Collagen thủy phân giúp phục hồi mô cơ, tăng cơ nạc
-      </li>
-
-      <li><strong>🛡️ Tăng sức đề kháng:</strong><br>
-        - Cung cấp đầy đủ vitamin và khoáng chất thiết yếu<br>
-        - Tăng cường hệ miễn dịch, hỗ trợ phục hồi sau bệnh
-      </li>
-
-      <li><strong>🌿 Cải thiện tiêu hóa – Dễ hấp thu:</strong><br>
-        - Inulin (chất xơ hòa tan) giúp tăng lợi khuẩn, chống táo bón<br>
-        - Tảo biển đỏ cung cấp canxi hữu cơ cho xương chắc khỏe
-      </li>
-
-      <li><strong>🔋 Năng lượng bền bỉ – Không gây mệt mỏi:</strong><br>
-        - Không gây cảm giác ngấy, đầy bụng<br>
-        - Phù hợp với người ăn kém hoặc cần phục hồi thể lực
-      </li>
-    </ul>
-
-    <p><strong>👨‍👩‍👧‍👦 Phù hợp cho:</strong></p>
-    <ul>
-      <li>Người gầy yếu, suy nhược, sau ốm hoặc sau phẫu thuật</li>
-      <li>Người lớn tuổi cần bổ sung dinh dưỡng</li>
-      <li>Người muốn tăng cân an toàn, lành mạnh</li>
-      <li>Người có nhu cầu tăng đề kháng, phục hồi sức khỏe</li>
-    </ul>
-
-    <p><strong>🔬 Cốt lõi sản phẩm:</strong> Cung cấp năng lượng đậm đặc và protein chất lượng cao, phù hợp cho người cần phục hồi, tăng cân, người kém ăn, người cao tuổi hoặc đang điều trị bệnh.</p>
-
-    <p><strong>🧊 Cách dùng:</strong> Pha 2 muỗng gạt (~20g) với 100ml nước ấm (50–60°C). Uống 1–2 lần/ngày sau bữa ăn hoặc trước khi ngủ.</p>
-
-    <p><strong>📦 Bảo quản:</strong> Đậy kín sau khi mở nắp. Bảo quản nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp. Sử dụng trong vòng 3 tuần sau khi mở nắp.</p>
-  </div>
-</div>
-
-  <!-- Sản phẩm 3 -->
-  <div class="product">
-    <img src="morning_cafe.jpg" alt="Morning Cafe">
-    <div class="info">
-      <h2>Morning Cafe – Special Edition</h2>
-      <p><strong>Thành phần:</strong> Bột kem thực vật (Siro glucose khô, chất béo thực vật, chất ổn định INS 340(ii), 451(i))
-
-Protein sữa, chất nhũ hóa INS (471, 481(i)), chất chống đông vón INS 551
-
-Đường kính trắng
-
-Bột cà phê hòa tan (13%)
-
-Chất xơ hòa tan (Orafti)
-
-Collagen thủy phân (1.1%)
-
-Nấm, đinh lăng, táo đỏ, linh chi, maltodextrin, muối tinh, chất ổn định (INS 466), hương cà phê tổng hợp.</p>
-      <p><strong>Công dụng:</strong> ✅ Giúp tỉnh táo, tăng năng lượng ngay từ ly đầu tiên
-✅ Hỗ trợ tăng cường trí nhớ, giảm căng thẳng tinh thần
-✅ Bổ sung collagen & thảo dược quý, làm đẹp da, chậm lão hóa
-✅ Cung cấp chất xơ, hỗ trợ hệ tiêu hóa khỏe mạnh
-✅ Thích hợp cho người làm việc văn phòng, học sinh – sinh viên ôn thi, người hay mất ngủ, mệt mỏi.</p>
-      <p><strong>Cách dùng:</strong> Pha 1 gói với 100ml nước nóng, có thể thêm đá khi pha 2 gói.</p>
-    </div>
-  </div>
-
-  <!-- Sản phẩm mới: Beauty More Collagen -->
-  <div class="product">
-    <img src="60c3260d-9580-4c2b-9ac1-71be02a0cf62.png" alt="Beauty More Collagen">
-    <div class="info">
-      <h2>Beauty More Collagen</h2>
-      <p><strong>Dạng:</strong> Nước uống bổ sung Collagen</p>
-      <p><strong>Thành phần:</strong> Nước, Collagen Hydrolyzate 2500mg/30ml, Đường Isomalt, Chiết xuất quả lựu, hương liệu, Vitamin C, Kẽm Gluconat</p>
-      <p><strong>Thông tin dinh dưỡng (trong 30ml):</strong></p>
-      <ul>
-        <li>Năng lượng: 34 Kcal</li>
-        <li>Protein: 2.25g</li>
-        <li>Carbohydrate: 0.12g</li>
-        <li>Đường: 2.51g</li>
-        <li>Chất béo: 0.06g</li>
-        <li>Muối: 20mg</li>
-      </ul>
-      <p><strong>Hướng dẫn sử dụng:</strong> Uống ngay sau khi mở nắp gói. Lắc nhẹ trước khi dùng.</p>
-      <p><strong>Bảo quản:</strong> Nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp.</p>
-    </div>
-  </div>
-
-  <!-- Sản phẩm 4: Bộ dưỡng da Aris -->
-<div class="product">
-  <img src="images.jpeg" alt="Bộ dưỡng da Aris">
-  <div class="info">
-    <h2>Bộ Dưỡng Da Aris – sản phẩm 3 in 1</h2>
-    
-    <p><strong>1. Cleansing Foam Plus+ (100ml):</strong></p>
-    <ul>
-      <li><strong>Công dụng:</strong> Làm sạch sâu, loại bỏ bụi bẩn và dầu thừa, cung cấp độ ẩm và làm dịu da.</li>
-      <li><strong>Thành phần:</strong> Glycerin, Sodium Hyaluronate, chiết xuất trà xanh hoặc nha đam,...</li>
-    </ul>
-
-    <p><strong>2. CC Cream – Concealer + Sunscreen (50ml):</strong></p>
-    <ul>
-      <li><strong>Công dụng:</strong> Che khuyết điểm nhẹ, chống nắng, làm đều màu da, tạo lớp nền mịn tự nhiên.</li>
-      <li><strong>Thành phần:</strong> Titanium Dioxide, Niacinamide (Vitamin B3), chiết xuất thảo dược,...</li>
-    </ul>
-
-    <p><strong>3. Iris Cream In Night (hũ):</strong></p>
-    <ul>
-      <li><strong>Công dụng:</strong> Dưỡng ẩm sâu ban đêm, phục hồi và tái tạo da, giúp da sáng khỏe.</li>
-      <li><strong>Thành phần:</strong> Collagen, chiết xuất ngọc trai, vitamin E, tinh chất thảo dược,...</li>
-    </ul>
-    <p><strong>Hướng dẫn sử dụng:</strong> Dùng buổi sáng và tối theo từng bước. Làm sạch da → thoa CC Cream (sáng) hoặc Night Cream (tối).</p>
-  </div>
-</div>
-
-<!-- Sản phẩm 5: PURI ACTIVE+ -->
-<div class="product">
-  <img src="vn-11134207-7r98o-lz0u2xqipy1t2b.jpeg" alt="PURI ACTIVE+">
-  <div class="info">
-    <h2>PURI ACTIVE+ – Bột Diệp Lục Giải Độc</h2>
-    <p><strong>Thành phần:</strong> Diệp lục, Chlorella, Atiso, Trà xanh, Táo, Collagen, Enzyme tiêu hóa,...</p>
-    <p><strong>Công dụng:</strong> Thanh lọc cơ thể, hỗ trợ thải độc gan và đường ruột, làm đẹp da, tăng đề kháng.</p>
-    <p><strong>Cách dùng:</strong> Pha 1 gói với 100–150ml nước, khuấy đều và uống. Dùng 1–2 lần/ngày trước bữa ăn.</p>
-    <p><strong>Bảo quản:</strong> Nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp. Đóng kín gói sau khi mở.</p>
-  </div>
-</div>
-
-<!-- Sản phẩm mới: IRIS ACNE CREAM -->
-<div class="product">
-  <img src="z6836923257697_50335bb71e3017f4e10d6b8eb128395a.jpg" alt="IRIS Acne Cream">
-  <div class="info">
-    <h2>IRIS – Kem Trị Mụn</h2>
-    <p><strong>Công dụng:</strong></p>
-    <ul>
-      <li>Se khít lỗ chân lông</li>
-      <li>Giúp giảm và ngăn ngừa mụn</li>
-      <li>Làm mờ các vết sẹo thâm do mụn gây ra</li>
-      <li>Dưỡng trắng da</li>
-    </ul>
-
-    <p><strong>Hướng dẫn sử dụng:</strong></p>
-    <ol>
-      <li>Làm sạch da và lau khô (khuyên dùng sữa rửa mặt <em>IRIS – CLEANSING FOAM PLUS+</em>)</li>
-      <li>Thoa nhẹ hai lần vào buổi sáng và tối lên vùng da bị mụn</li>
-    </ol>
-  </div>
-</div>
-
-<!-- Sản phẩm mới: IRIS MELASMA NIGHT CREAM -->
-<div class="product">
-  <img src="z6836925378864_33900bc2d10765511cfdda8555769667.jpg" alt="IRIS Melasma Night Cream">
-  <div class="info">
-    <h2>IRIS – Kem Đêm Nám</h2>
-    <p><strong>Công dụng:</strong></p>
-    <ul>
-      <li>Giúp giảm dần và ngăn ngừa nám, sạm, tàn nhang, đồi mồi</li>
-      <li>Dưỡng trắng da, làm mềm mịn da và giữ ẩm</li>
-      <li>Giúp ngăn ngừa lão hóa da</li>
-    </ul>
-
-    <p><strong>Hướng dẫn sử dụng:</strong></p>
-    <ol>
-      <li>Dùng mỗi tối sau khi rửa mặt bằng <em>IRIS – CLEANSING FOAM PLUS+</em></li>
-      <li>Thoa một lớp mỏng lên da, massage nhẹ nhàng từ dưới lên trên và từ trong ra ngoài</li>
-      <li>Để kem thẩm thấu sâu vào da</li>
-    </ol>
-  </div>
-</div>
-
-<!-- Sản phẩm mới: Iris Shampoo 3 in 1 -->
-<div class="product">
-  <img src="z6836923253923_16e0fe4ecfb491517f8a6f24ee03b322.jpg" alt="Iris Shampoo 3 in 1">
-  <div class="info">
-    <h2>Iris Shampoo 3 in 1 – Tắm, Gội, Dưỡng</h2>
-    <p><strong>Thể tích:</strong> 500ml (E 16.9 FL.OZ)</p>
-    <p><strong>Hương:</strong> Nước hoa Pháp</p>
-
-    <p><strong>✨ Công dụng:</strong></p>
-    <ul>
-      <li>Làm sạch da và tóc một cách nhẹ nhàng</li>
-      <li>Dưỡng ẩm, bảo vệ tóc và làn da</li>
-      <li>Làm mới làn da – Refresh skin</li>
-      <li>Nuôi dưỡng & bảo vệ tóc – Nourish & protect hair</li>
-      <li>Thơm lâu với hương nước hoa Pháp quyến rũ</li>
-    </ul>
-
-    <p><strong>🧪 Thành phần nổi bật:</strong></p>
-    <ul>
-      <li>Free Sulfate – Không chứa sulfate, an toàn cho da nhạy cảm</li>
-      <li>Free Silicon – Không chứa silicon, không gây bít lỗ chân lông</li>
-      <li>Phù hợp với mọi loại da – For all skin types</li>
-    </ul>
-
-    <p><strong>🧴 Cách dùng:</strong></p>
-    <ol>
-      <li>Làm ướt cơ thể và tóc</li>
-      <li>Lấy một lượng sản phẩm vừa đủ, tạo bọt</li>
-      <li>Massage nhẹ nhàng lên tóc và cơ thể</li>
-      <li>Xả sạch lại với nước</li>
-      <li>Có thể sử dụng hằng ngày</li>
-    </ol>
-  </div>
-</div>
+  <script>
+  // Hiệu ứng tim bay 💕
+  const hearts = ["💜","💖","💕","💞","💗"];
+  function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.textContent = hearts[Math.floor(Math.random()*hearts.length)];
+    heart.style.left = Math.random() * window.innerWidth + "px";
+    heart.style.bottom = "0px";
+    heart.style.animationDuration = 3 + Math.random() * 3 + "s";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 5000);
+  }
+  setInterval(createHeart, 300);
+  </script>
 </body>
 </html>
