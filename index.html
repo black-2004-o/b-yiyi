@@ -3,14 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bunny 🐰 | Giới thiệu bản thân 💗</title>
+<title>Bé Uni 🪼 | Giới thiệu bản thân 💗</title>
 <style>
   * { box-sizing: border-box; }
-
   body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: url("https://i.pinimg.com/originals/89/69/dc/8969dc3e963f6cc6d69b5a0db10ceaa2.jpg") no-repeat center center fixed;
+    background: url("gen-h-z7365391513679_4d0dc174b547aadc9a342fcefab48a22.jpg") no-repeat center center fixed;
     background-size: cover;
     color: #4a2c2a;
     display: flex;
@@ -50,30 +49,6 @@
     overflow: hidden;
   }
 
-  .card::before {
-    content: "✨";
-    position: absolute;
-    top: -10px;
-    left: 10px;
-    font-size: 1.8rem;
-    animation: sparkle 3s infinite linear;
-  }
-
-  .card::after {
-    content: "💖";
-    position: absolute;
-    bottom: -10px;
-    right: 15px;
-    font-size: 1.8rem;
-    animation: sparkle 3s infinite reverse linear;
-  }
-
-  @keyframes sparkle {
-    0% { opacity: 0.5; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.3); }
-    100% { opacity: 0.5; transform: scale(1); }
-  }
-
   .avatar {
     width: min(120px, 35vw);
     height: min(120px, 35vw);
@@ -84,16 +59,12 @@
     margin-bottom: 15px;
   }
 
-  h2 {
-    color: #ff4da6;
-    font-size: clamp(1.3rem, 3.5vw, 1.8rem);
-  }
+  h2 { color: #ff4da6; }
 
   p {
     font-size: clamp(0.95rem, 2.5vw, 1rem);
     line-height: 1.6;
     margin: 10px 0;
-    padding: 0 5px;
   }
 
   .btn {
@@ -102,17 +73,12 @@
     color: white;
     padding: 12px 25px;
     border-radius: 25px;
-    font-size: clamp(0.9rem, 3vw, 1rem);
     cursor: pointer;
-    transition: transform 0.3s, background 0.3s;
+    transition: transform 0.3s;
     margin-top: 12px;
-    width: fit-content;
   }
 
-  .btn:hover {
-    transform: scale(1.08);
-    background: linear-gradient(90deg, #ff4da6, #ff99c8);
-  }
+  .btn:hover { transform: scale(1.08); }
 
   #secret {
     margin-top: 10px;
@@ -127,85 +93,167 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
-  .bubble {
+  .popup {
     position: fixed;
-    bottom: -20px;
-    font-size: 1.2rem;
-    animation: bubbleUp 6s linear infinite;
-    color: #ff99cc;
-    opacity: 0.7;
-    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 240, 245, 0.95);
+    padding: 25px 35px;
+    border-radius: 25px;
+    box-shadow: 0 0 25px rgba(255, 105, 180, 0.4);
+    text-align: center;
+    color: #ff4da6;
+    font-size: 1.1rem;
+    font-weight: 600;
+    opacity: 0;
+    z-index: 999;
+    transition: opacity 1s ease-in-out;
+    animation: popupFade 4s ease-in-out forwards;
   }
 
-  @keyframes bubbleUp {
-    from { transform: translateY(0) scale(1); opacity: 0.8; }
-    to { transform: translateY(-100vh) scale(1.8); opacity: 0; }
+  @keyframes popupFade {
+    0% { opacity: 0; transform: translate(-50%, -55%); }
+    20% { opacity: 1; transform: translate(-50%, -50%); }
+    80% { opacity: 1; }
+    100% { opacity: 0; transform: translate(-50%, -45%); }
+  }
+
+  .lang-select {
+    position: fixed;
+    top: 10px;
+    right: 15px;
+    display: flex;
+    gap: 10px;
+  }
+
+  .lang-select img {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    transition: transform 0.2s;
+  }
+
+  .lang-select img:hover {
+    transform: scale(1.2);
   }
 </style>
 </head>
 <body>
 
-  <h1>🐰 Bunny – Cô gái yêu màu hồng 💗</h1>
+  <div class="popup" id="popup"></div>
 
-  <div class="card">
-    <!-- ẢNH MỚI  -->
-    <img src="gen-h-z7179449045516_8c459512424350a6bfb0befa5a830484.jpg" alt="Bunny avatar" class="avatar">
-    
-    <h2>🌸 (Bunny) 🌸</h2>
-    <p>🎂 <b>Ngày sinh:</b> 05/11/....</p>
-    <p>💖 Nghệ danh: <b>Bunny 🐰</b></p>
-
-    <p>Xin chào 💕! Mình là <b>Bunny 🐰</b> – cô gái nhỏ nhắn mang trong mình một trái tim ngọt ngào và luôn yêu đời 🌸. 
-    Mình cực kỳ yêu màu hồng 💗 – màu của sự dịu dàng, lãng mạn và ấm áp, giống như cảm xúc mà mình muốn mang đến cho mọi người xung quanh.</p>
-
-    <p>👜 Mình rất thích <b>mua sắm</b> – không chỉ vì thích quần áo đẹp mà còn bởi cảm giác tự thưởng cho bản thân sau những ngày cố gắng. 
-    Mỗi món đồ đều là một “niềm vui nhỏ xinh” giúp mình thêm tự tin và rạng rỡ 🌷.</p>
-
-    <p>✈️ <b>Du lịch</b> là niềm đam mê lớn khác của mình! Mình thích xách balo lên và khám phá những nơi mới, hít thở bầu không khí trong lành, 
-    chụp những tấm ảnh thật đẹp 📸 và lưu lại kỷ niệm về những khoảnh khắc đáng yêu trong hành trình sống của chính mình 💖.</p>
-
-    <p>🌸 <b>Tính cách của Bunny</b> là sự pha trộn giữa sự dịu dàng và tinh nghịch – luôn vui vẻ, hòa đồng, đôi khi “bánh bèo” một chút nhưng chân thành, biết lắng nghe và rất quan tâm đến cảm xúc của người khác 💞. 
-    Mình tin rằng nụ cười có thể làm thế giới này dịu dàng hơn 🌍.</p>
-
-    <p>💌 <b>Châm ngôn sống:</b> “Luôn tỏa sáng theo cách riêng của mình — dù nhỏ bé nhưng luôn mang năng lượng tích cực, 
-    dù nhẹ nhàng nhưng đủ mạnh mẽ để bước qua mọi khó khăn. Hãy sống thật hồng, thật đẹp, và thật Bunny 🐰.”</p>
-
-    <button class="btn" onclick="alert('Bunny gửi lời chào dễ thương đến bạn 💕 Chúc bạn một ngày hồng như chính nụ cười của Bunny 🐰!')">Nhấn để chào Bunny 🐰</button>
-    <br>
-    <button class="btn" onclick="showSecret()">Muốn biết bí mật của Bunny 🐰?</button>
-
-    <div id="secret">💞 Bí mật này Bunny giữ kỹ lắm 💖 Không được bật mí đâu nha 😚💞</div>
+  <div class="lang-select">
+    <img src="https://flagcdn.com/w20/vn.png" onclick="changeLang('vi')" title="Tiếng Việt">
+    <img src="https://flagcdn.com/w20/gb.png" onclick="changeLang('en')" title="English">
+    <img src="https://flagcdn.com/w20/ru.png" onclick="changeLang('ru')" title="Русский">
+    <img src="https://flagcdn.com/w20/cn.png" onclick="changeLang('cn')" title="中文">
   </div>
 
-  <script>
-    function showSecret() {
-      const secret = document.getElementById('secret');
-      if (secret.style.display === 'none' || secret.style.display === '') {
-        secret.style.display = 'block';
-        for (let i = 0; i < 8; i++) {
-          const heart = document.createElement('div');
-          heart.className = 'bubble';
-          heart.textContent = ['💗','💖','💞','💕','💓'][Math.floor(Math.random()*5)];
-          heart.style.left = Math.random() * 100 + 'vw';
-          heart.style.animationDuration = (4 + Math.random() * 3) + 's';
-          document.body.appendChild(heart);
-          setTimeout(() => heart.remove(), 7000);
-        }
-      } else {
-        secret.style.display = 'none';
-      }
-    }
+  <h1 id="title"></h1>
 
-    setInterval(() => {
-      const heart = document.createElement('div');
-      heart.className = 'bubble';
-      heart.textContent = ['💗','💖','💞','💕','💓'][Math.floor(Math.random()*5)];
-      heart.style.left = Math.random() * 100 + 'vw';
-      heart.style.animationDuration = (4 + Math.random() * 3) + 's';
-      document.body.appendChild(heart);
-      setTimeout(() => heart.remove(), 7000);
-    }, 1000);
-  </script>
+  <div class="card">
+    <img src="gen-h-z7193515611095_9c8c651440b4bb8c9eaed6e887862c41.jpg" alt="Bunny avatar" class="avatar">
+    <h2 id="name"></h2>
+    <div id="content"></div>
+    <button class="btn" onclick="showSecret()" id="btnText"></button>
+    <div id="secret"></div>
+  </div>
 
+<script>
+  const data = {
+    vi: {
+  popup: "💌 Hey, cảm ơn cậu nhaaa 😚<br>Bé Uni vui lắm vì được cậu ghé qua 💕<br>Hãy cùng Bé Uni khám phá thêm nhiều điều dễ thương trong cuộc sống nào! 🌈",
+  title: "🧸 Bé Uni – Cô bé yêu màu hồng 💗",
+  name: "🌸 (Bé Uni) 🌸",
+  content: `
+    <p>Xin chào 💕! Mình là <b>Bé Uni 🧸</b> – một cô bé nhỏ nhắn với trái tim ngọt ngào và luôn tràn đầy năng lượng tích cực 🌸.</p>
+    <p>Mình cực kỳ yêu màu hồng 💗 – màu của sự dịu dàng, đáng yêu và ấm áp, giống như cảm xúc mình muốn lan tỏa đến mọi người.</p>
+    <p>👜 Mình thích <b>mua sắm</b> và <b>du lịch</b> ✈️ – mỗi chuyến đi đều mang lại niềm vui và những kỷ niệm xinh xắn 💖.</p>
+    <p>🌸 <b>Tính cách:</b> Dịu dàng, đáng yêu, hơi “bánh bèo” một chút nhưng luôn chân thành 💞.</p>
+    <p>💌 <b>Châm ngôn sống:</b> “Cứ là chính mình – nhỏ bé, dễ thương và luôn tỏa sáng theo cách của Bé Uni 🧸.”</p>
+  `,
+  btn: "Muốn biết bí mật của Bé Uni không nè? 🧸",
+  secret: "💞 Bí mật này Bé Uni giữ kỹ lắm đó 💖 Chưa được bật mí đâu nha 😚💞"
+},
+
+en: {
+  popup: "💌 Hey there! 😍<br>Bé Uni is so happy you stopped by 💕<br>Let’s explore a world of cuteness together! 🌸",
+  title: "🧸 Bé Uni – The girl who loves pink 💗",
+  name: "🌸 (Bé Uni) 🌸",
+  content: `
+    <p>Hello 💕! I'm <b>Bé Uni 🧸</b> – a sweet and cheerful little girl full of positivity 🌸.</p>
+    <p>I truly adore the color pink 💗 – it represents softness, love, and warmth, just like the feelings I want to share.</p>
+    <p>👜 I love <b>shopping</b> and <b>traveling</b> ✈️ – every trip brings joy and lovely memories 💖.</p>
+    <p>🌸 <b>Personality:</b> Gentle, cute, a little dreamy, but always sincere 💞.</p>
+    <p>💌 <b>Life quote:</b> “Be yourself — stay cute, stay kind, stay Bé Uni 🧸.”</p>
+  `,
+  btn: "Wanna know Bé Uni’s little secret? 🧸",
+  secret: "💞 This secret is very special 💖 Bé Uni can’t tell you yet 😚💞"
+},
+
+ru: {
+  popup: "💌 Привет 😚<br>Бе Уни очень рада тебя видеть 💕<br>Давай вместе создавать милые моменты! 🌈",
+  title: "🧸 Бе Уни – Девочка, любящая розовый 💗",
+  name: "🌸 (Бе Уни) 🌸",
+  content: `
+    <p>Привет 💕! Я <b>Бе Уни 🧸</b> – милая и добрая девочка 🌸.</p>
+    <p>Я обожаю розовый цвет 💗 – он символизирует нежность, тепло и любовь.</p>
+    <p>👜 Я люблю <b>шопинг</b> и <b>путешествия</b> ✈️ – каждое из них приносит радость 💖.</p>
+    <p>🌸 <b>Характер:</b> Нежная, милая, немного мечтательная, но искренняя 💞.</p>
+    <p>💌 <b>Девиз:</b> “Будь собой — будь милой, будь доброй, будь Бе Уни 🧸.”</p>
+  `,
+  btn: "Хочешь узнать секрет Бе Уни? 🧸",
+  secret: "💞 Это особенный секрет 💖 Бе Уни пока не расскажет 😚💞"
+},
+
+cn: {
+  popup: "💌 你好呀！😚<br>Bé Uni 很开心你来了 💕<br>一起发现更多可爱的瞬间吧！🌈",
+  title: "🧸 Bé Uni – 喜爱粉色的小女孩 💗",
+  name: "🌸 (Bé Uni) 🌸",
+  content: `
+    <p>你好 💕！我是 <b>Bé Uni 🧸</b> —— 一个甜美又可爱的女孩 🌸。</p>
+    <p>我非常喜欢粉色 💗，它代表温柔、可爱和温暖。</p>
+    <p>👜 我喜欢 <b>购物</b> 和 <b>旅行</b> ✈️，每一次出发都充满快乐 💖。</p>
+    <p>🌸 <b>性格：</b> 温柔、可爱、有点梦幻，但很真诚 💞。</p>
+    <p>💌 <b>座右铭：</b> “做自己——保持可爱，保持善良，做 Bé Uni 🧸。”</p>
+  `,
+  btn: "想知道 Bé Uni 的小秘密吗？🧸",
+  secret: "💞 这是 Bé Uni 的秘密哦 💖 现在还不能告诉你 😚💞"
+}
+  };
+
+  let currentLang = 'vi';
+
+  function changeLang(lang) {
+    currentLang = lang;
+    const d = data[lang];
+    document.getElementById("title").innerHTML = d.title;
+    document.getElementById("name").innerHTML = d.name;
+    document.getElementById("content").innerHTML = d.content;
+    document.getElementById("btnText").innerText = d.btn;
+    document.getElementById("secret").innerText = "";
+    document.getElementById("secret").style.display = "none";
+    showPopup(d.popup);
+  }
+
+  function showPopup(text) {
+    const popup = document.getElementById('popup');
+    popup.innerHTML = text;
+    popup.style.opacity = '1';
+    setTimeout(() => popup.style.opacity = '0', 4000);
+  }
+
+  function showSecret() {
+    const secretDiv = document.getElementById("secret");
+    const d = data[currentLang];
+    secretDiv.innerText = d.secret;
+    secretDiv.style.display = "block";
+  }
+
+  changeLang('vi');
+</script>
 </body>
 </html>
